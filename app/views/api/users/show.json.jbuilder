@@ -1,1 +1,3 @@
-json.partial! "./user", user: @user 
+json.currentUser do
+  json.partial! "./user", user: @user
+end

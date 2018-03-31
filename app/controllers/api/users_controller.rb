@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      # TODO: redicrect
+      render :show
     else
       render @user.errors.full_messages, status: 418
     end

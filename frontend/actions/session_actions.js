@@ -27,6 +27,6 @@ export const signupUser = userForm => dispatch =>
 
 export const logoutUser = () => dispatch =>
   logout().then(
-    () => dispatch(receiveCurrentUser({})),
+    () => dispatch(receiveCurrentUser({ currentUser: null })),
     errors => dispatch(receiveErrors(errors))
   );
